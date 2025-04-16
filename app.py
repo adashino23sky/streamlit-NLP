@@ -17,8 +17,9 @@ def home():
     return 
 
 def setting_prompt():
-
-
+    st.title("設定ページ")
+    if st.button("ホームへ戻る"):
+        go_to("home")
 
 def main():
     st.title("ホームページ")
@@ -33,8 +34,7 @@ def main():
 
 
 
-
-    st.markdown('# 画像を保存するデモ')
+st.markdown('# 画像を保存するデモ')
     file = st.file_uploader('画像をアップロードしてください.', type=['jpg', 'jpeg', 'png'])
     if file:
         st.markdown(f'{file.name} をアップロードしました.')
